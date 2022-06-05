@@ -4,7 +4,7 @@
 
 - Node.js 12+
 - NPM
-- Webpack / Browserify (optional)
+- Webpack / Browserify **(optional)**
 
 ## Installation
 
@@ -18,7 +18,7 @@ $ npm i webflow-api-node
 ## Usage
 
 ```javascript
-const Webflow = require('webflow-api')
+const Webflow = require('webflow-api-node')
 
 // Initialize the API
 const api = new Webflow({ token: 'api-token' })
@@ -48,6 +48,7 @@ API Documention and other information:
 
 - [API documentation](https://developers.webflow.com)
 - [Generating API Access Token](https://university.webflow.com/lesson/intro-to-the-webflow-api)
+- [Collection IDs, and more](https://www.briantsdawson.com/blog/webflow-api-how-to-get-site-collection-and-item-ids-for-zapier-and-parabola-use#:~:text=The%20fastest%20way%20to%20find,the%20URL%20of%20the%20image.)
 
 ## Contributing
 
