@@ -21,22 +21,40 @@ $ npm i webflow-api-node
 const Webflow = require('webflow-api-node')
 
 // Initialize the API
-const api = new Webflow({ token: 'api-token' })
+const webflow = new Webflow({ token: 'webflow-token' })
 
 // GET a site
-api
+webflow
   .site({ siteId: '580e63e98c9a982ac9b8b741' })
   .then((site) => console.log(site))
+  .catch((err) => console.log(err))
+
+// GET all items
+webflow
+  .items({ siteId: '580e63e98c9a982ac9b8b741' })
+  .then((item) => console.log(item))
+  .catch((err) => console.log(err))
 
 // POST
-api
-  .site({ siteId: '580e63e98c9a982ac9b8b741' })
-  .then((site) => console.log(site))
+ webflow
+  .createItem({
+    collectionId: '580e63fc8c9a982ac9b8b745',
+    fields: {ß
+      name: 'Exciting blog post title',
+      slug: 'exciting-post',
+      _archived: false,
+      _draft: false,
+      color: '#a98080',
+      author: '580e640c8c9a982ac9b8b778',
+      'post-body': '<p>Blog post contents...</p>',
+      'post-summary': 'Summary of exciting blog post',
+      'main-image': '580e63fe8c9a982ac9b8b749',
+    },
+  })
+  .then((i) => console.log(i))
+  .catch((err) => console.log(err))
 
-// PUT
-api
-  .site({ siteId: '580e63e98c9a982ac9b8b741' })
-  .then((site) => console.log(site))
+ß
 ```
 
 The `Webflow` constructor takes several options to initialize the API client:
